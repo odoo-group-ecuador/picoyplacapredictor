@@ -5,8 +5,6 @@ from datetime import datetime
 weekdays = {0 : [0, 1], 1 : [2, 3], 2 : [4, 5], \
             3 : [6, 7], 4 : [8, 9], 5 : "road", \
             6 : "road"}
-#Create variables with start-end restricted hours
-morning1, morning2, afternoon1, afternoon2 = "07:00", "09:30", "16:00", "19:30"
 
 class PicoPlaca(object):
     """Attemp to check pico y placa for my car.""" 
@@ -52,7 +50,7 @@ class PicoPlaca(object):
 #Create and instance into PicoPlaca class using input(), raw_input() for Python2
 my_car = PicoPlaca(raw_input("Full license plate (XXX-####): "), \
                    raw_input("Date (DD-MM-YYYY): "), \
-                   raw_input("Time 24-hour (HH-MM): "))
+                   raw_input("Time 24-hour (HH:MM): "))
 
 #Call method to review the entered information
 my_car.car_query_parameters()
